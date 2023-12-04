@@ -23,14 +23,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.3rem 2%;
-  background-color: rgb(225, 194, 163);
-  border-bottom: 1 px solid #e1c2a2;
+  padding: 0.2rem 2%;
+  background-color: rgba(224, 194, 163, 0.8);
+  border-bottom: 1 px solid #422414;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .navbar .navbar-logo {
@@ -75,6 +75,42 @@ body {
 #hamburger_menu {
   display: none;
 }
+
+/* Navbar search form */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--bg);
+  padding: 1rem;
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: var(--bg);
+}
+
+
 
 /*hero section*/
 .hero {
@@ -190,6 +226,62 @@ body {
   text-align: left;
 }
 
+/*why-us*/
+.why-us .section-title h2 {
+  font-size: 2.5rem;
+  padding: 0;
+  color: #422414;
+  font-family:"Source Sans 3", sans-serif;
+  text-align: center;
+  justify-content: center;
+  margin: 0 0 30px;
+
+}
+.why-us .box {
+  padding: 10px 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all ease-in-out 0.3s;
+  background: #1a1814;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.why-us .box span {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: #cda45e;
+}
+
+.why-us .box h4 {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 0;
+  margin: 20px 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.why-us .box p {
+  color: #aaaaaa;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.why-us .box:hover {
+  background: #cda45e;
+  padding: 30px 30px 70px 30px;
+  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+}
+
+.why-us .box:hover span,
+.why-us .box:hover h4,
+.why-us .box:hover p {
+  color: #fff;
+}
+
 /*content2*/
 
 .about .row .about-img2 {
@@ -243,13 +335,14 @@ body {
 .menu .row {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 5rem;
+  margin-top: 1rem;
   justify-content: center;
+  padding: 0;
 }
 
 .menu .row .menu-card {
   text-align: center;
-  padding-bottom: 4rem;
+  padding-bottom: 6rem;
 }
 
 .menu .row .menu-card img {
@@ -267,13 +360,36 @@ body {
 /*--------------------------------------------------------------
 # Chefs
 --------------------------------------------------------------*/
+
+
+.chefs .section-title p{
+  font-size: 3rem;
+  padding: 0;
+  color: #422414;
+  font-family:"Source Sans 3", sans-serif;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
 .chefs .member {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   background: #343a40;
   position: relative;
   overflow: hidden;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+
 }
+
+.chefs .member img{
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+}
+
 
 .chefs .member .member-info {
   opacity: 0;
@@ -421,13 +537,13 @@ section {
 
 .contact .row {
   display: flex;
-  margin-top: 2rem;
+  margin-top: 4rem;
   background-color: rgb(33, 33, 33);
 }
 
 .contact .row .map {
   flex: 1 1 100%;
-  width: 200%;
+  width: 500%;
   object-fit: cover;
 }
 
@@ -613,6 +729,17 @@ html {
     padding-top: 0;
   }
 }
+
+@media (min-width: 768px) {
+  .chefs .member {
+    flex-direction: row;
+  }
+
+  .chefs .member img {
+    max-width: 300px; 
+  }
+}
+
 /*Mobile Phone*/
 @media (max-width: 450px) {
   html {
