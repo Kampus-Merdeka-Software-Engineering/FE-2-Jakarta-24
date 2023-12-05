@@ -12,9 +12,26 @@
   text-decoration: none;
 }
 
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #343a40;
+  color: #422414;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #cda45e;
+  color: #422415;
+
+}
+
 .col-lg-4 {
   width: calc(100%/4);
-  padding: 8px;
+  padding: 2px;
 }
 
 body {
@@ -79,21 +96,24 @@ body {
 
 #hamburger_menu {
   display: none;
+  color: rgba(66, 36, 20, 0.9);
 }
 
 /* Navbar search form */
 .navbar .search-form {
   position: absolute;
-  top: 100%;
-  right: 7%;
+  top: 105%;
+  right: 2rem;
   background-color: #fff;
-  width: 50rem;
-  height: 5rem;
+  width: 40rem;
+  height: 4rem;
+  overflow: hidden;
   display: flex;
   align-items: center;
   transform: scaleY(0);
-  transform-origin: top;
+  transform-origin: left;
   transition: 0.3s;
+  border-radius: 0.5rem;
 }
 
 .navbar .search-form.active {
@@ -103,16 +123,93 @@ body {
 .navbar .search-form input {
   height: 100%;
   width: 100%;
-  font-size: 1.6rem;
-  color: var(--bg);
-  padding: 1rem;
+  font-size: 1rem;
+  color: var(--primary);
+  padding:0 1.5rem ;
 }
 
 .navbar .search-form label {
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1rem;
   margin-right: 1.5rem;
+  color: var(--primary);
+}
+
+/* Shopping Cart */
+.shopping-cart {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  height: 100vh;
+  width: 25rem;
+  padding: 0 1.5rem;
+  background-color: rgba(200, 190, 180, 0.9);
   color: var(--bg);
+  transition: 0.3s;
+}
+
+.shopping-cart.active {
+  right: 0;
+}
+
+.shopping-cart .cart-item {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #666;
+  position: relative;
+}
+
+.shopping-cart img {
+  height: 6rem;
+  
+}
+
+.shopping-cart h3 {
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.shopping-cart .item-price {
+  font-size: 1.2rem;
+  color: #422414;
+}
+
+.shopping-cart .quantity {
+  font-size: 1.3rem;
+  color: #422414;
+}
+.shopping-cart .total{
+  font-size: 1.4rem;
+  color: #000;
+}
+.shopping-cart .total{
+  font-size: 1.4rem;
+  color: #000;
+  text-align: center;
+}
+.shopping-cart .remove-item {
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.shopping-cart .btn {
+  display: block;
+  text-align: center;
+  margin: 1rem 0;
+  
+}
+
+.shopping-cart .remove-item:hover {
+  color: var(--primary);
+}
+
+.navbar .shopping-cart .remove-item:hover {
+  color: var(--primary);
 }
 
 
@@ -544,18 +641,18 @@ section {
 
 .contact .row {
   display: flex;
-  margin-top: 4rem;
-  background-color: rgb(33, 33, 33);
+  margin-top: 2rem;
+  background-color: rgba(33, 33, 33, 0.5);
 }
 
 .contact .row .map {
-  flex: 1 1 100%;
-  width: 500%;
+  flex: 1 1 45rem;
+  width: 100%;
   object-fit: cover;
 }
 
 .contact .row form {
-  flex: 1 1 100%;
+  flex: 1 1 45rem;
   padding: 5rem 2rem;
   text-align: center;
 }
@@ -564,9 +661,9 @@ section {
   display: flex;
   align-items: center;
   margin-top: 2rem;
-  background-color: #222;
+  background-color: rgba(33, 33, 33, 0.5);
   border: 1px solid whitesmoke;
-  padding-left: 2em;
+  padding-left: 2rem;
 }
 
 .contact .row form .input-group input {
@@ -642,6 +739,15 @@ html {
   html {
     font-size: 75%;
   }
+
+  .chefs .member {
+    flex-direction: row;
+  }
+
+  .chefs .member img {
+    max-width: 400px; 
+    
+  }
 }
 
 /*Tablet*/
@@ -686,6 +792,11 @@ html {
 
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
+  }
+
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
   }
 
   .about .row {
