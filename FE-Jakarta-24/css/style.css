@@ -226,13 +226,13 @@ body {
 }
 
 .login-form h3{
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-transform: uppercase;
   color: var(--black);
 }
 
 .login-form.active{
-  right: 2rem;
+  right: 1.5rem;
   transition: .4s linear;
 }
 
@@ -242,13 +242,13 @@ body {
   background: #eee;
   border-radius: .5rem;
   padding: 1rem;
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   color: var(--black);
   text-transform: none;
 }
 
 .login-form p{
-  font-size: 1.4rem;
+  font-size: 0.9rem;
   padding: .5rem 0;
   color:var(--light-color);
 }
