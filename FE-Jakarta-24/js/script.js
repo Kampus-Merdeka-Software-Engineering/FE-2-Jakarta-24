@@ -22,6 +22,12 @@ document.querySelector('#shopping-cart-button').onclick = (e) => {
   e.preventDefault();
 };
 
+// Toggle class active untuk login form
+const loginForm = document.querySelector('.login-form');
+document.querySelector('#login-form').onclick = (e) => {
+  loginForm.classList.toggle('active');
+  e.preventDefault();
+
 // Klik di luar elemen
 const hm = document.querySelector('#hamburger-menu');
 const sb = document.querySelector('#search-button');
