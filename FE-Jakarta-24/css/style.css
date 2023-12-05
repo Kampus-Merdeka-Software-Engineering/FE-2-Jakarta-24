@@ -217,9 +217,9 @@ body {
 .login-form{
   position: absolute;
   top: 110%; right: -110%;
-  width: 30rem;
+  width: 25rem;
   box-shadow: var(--box-shadow);
-  padding:2rem;
+  padding:1.5rem;
   border-radius: .5rem;
   background: #fff;
   text-align: center;
