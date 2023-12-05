@@ -47,4 +47,9 @@ document.addEventListener('click', function (e) {
   if (!sc.contains(e.target) && !shoppingCart.contains(e.target)) {
     shoppingCart.classList.remove('active');
   }
+
+    if (!lf.contains(e.target) && !loginForm.contains(e.target)) {
+    loginForm.classList.remove('active');
+  }
+
 });
