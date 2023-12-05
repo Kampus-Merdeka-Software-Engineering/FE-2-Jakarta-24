@@ -217,7 +217,7 @@ body {
 .login-form{
   position: absolute;
   top: 110%; right: -110%;
-  width: 15rem;
+  width: 23rem;
   box-shadow: var(--box-shadow);
   padding:1.3rem;
   border-radius: .5rem;
@@ -241,7 +241,7 @@ body {
   margin: .7rem 0;
   background: #eee;
   border-radius: .5rem;
-  padding: 1.5rem;
+  padding: 1.1rem;
   font-size: 1.1rem;
   color: var(--black);
   text-transform: none;
