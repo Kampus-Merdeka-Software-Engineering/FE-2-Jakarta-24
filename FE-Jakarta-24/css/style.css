@@ -21,6 +21,7 @@
   border: 0.1rem solid #343a40;
   color: #422414;
   cursor: pointer;
+  background: none;
 }
 
 .btn:hover {
