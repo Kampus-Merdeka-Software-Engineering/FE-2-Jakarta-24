@@ -212,23 +212,6 @@ body {
   color: var(--primary);
 }
 
-.login-form{
-  position: absolute;
-  top:110%; right:2rem;
-  width:30rem;
-  box-shadow: var(--box-shadow);
-  padding:2rem;
-  border-radius: .5rem;
-  background: #9b773c;
-  text-align: center;
-}
-
-.login-form h3{
-  font-size:2.5rem;
-  text-transform: uppercase;
-  color: var(--black);
-  
-
 /*hero section*/
 .hero {
   min-height: 100vh;
