@@ -219,7 +219,7 @@ body {
   top: 110%; right: -110%;
   width: 15rem;
   box-shadow: var(--box-shadow);
-  padding:1.5rem;
+  padding:1rem;
   border-radius: .5rem;
   background: #fff;
   text-align: center;
