@@ -219,7 +219,7 @@ body {
   top: 110%; right: -110%;
   width: 15rem;
   box-shadow: var(--box-shadow);
-  padding:1rem;
+  padding:1.3rem;
   border-radius: .5rem;
   background: #fff;
   text-align: center;
@@ -241,7 +241,7 @@ body {
   margin: .7rem 0;
   background: #eee;
   border-radius: .5rem;
-  padding: 1.3rem;
+  padding: 1.5rem;
   font-size: 1.1rem;
   color: var(--black);
   text-transform: none;
