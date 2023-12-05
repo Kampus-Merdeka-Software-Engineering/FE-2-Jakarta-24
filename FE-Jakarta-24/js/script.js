@@ -32,6 +32,7 @@ document.querySelector('#login-form').onclick = (e) => {
 // Klik di luar elemen
 const hm = document.querySelector('#hamburger-menu');
 const sb = document.querySelector('#search-button');
+const lf = document.querySelector('#login-form');
 const sc = document.querySelector('#shopping-cart-button');
 
 document.addEventListener('click', function (e) {
