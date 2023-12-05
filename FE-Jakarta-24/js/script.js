@@ -27,6 +27,7 @@ const loginForm = document.querySelector('.login-form');
 document.querySelector('#login-form').onclick = (e) => {
   loginForm.classList.toggle('active');
   e.preventDefault();
+};
 
 // Klik di luar elemen
 const hm = document.querySelector('#hamburger-menu');
