@@ -15,19 +15,7 @@ document.querySelector('#search-button').onclick = (e) => {
   e.preventDefault();
 };
 
-// Toggle class active untuk shopping cart
-const shoppingCart = document.querySelector('.shopping-cart');
-document.querySelector('#shopping-cart-button').onclick = (e) => {
-  shoppingCart.classList.toggle('active');
-  e.preventDefault();
-};
 
-// Toggle class active untuk login form
-const loginForm = document.querySelector('.login-form');
-document.querySelector('#login-form').onclick = (e) => {
-  loginForm.classList.toggle('active');
-  e.preventDefault();
-};
 
 // Klik di luar elemen
 const hm = document.querySelector('#hamburger-menu');
@@ -65,11 +53,6 @@ itemDetailButtons.forEach((btn) => {
   };
 });
 
-// klik tombol close modal
-document.querySelector('.modal .close-icon').onclick = (e) => {
-  itemDetailModal.style.display = 'none';
-  e.preventDefault();
-};
 
 // klik di luar modal
 window.onclick = (e) => {
@@ -77,3 +60,106 @@ window.onclick = (e) => {
     itemDetailModal.style.display = 'none';
   }
 };
+
+// scroll indicator
+document.addEventListener('DOMContentLoaded', function () {
+  const header = document.querySelector('nav');
+  const scrollIndicator = document.getElementById('scrollIndicator');
+
+  function updateScrollIndicator() {
+   const scrollPosition = window.scrollY;
+   const headerHeight = header.offsetHeight;
+   const contentHeight = document.body.clientHeight - window.innerHeight;
+   const scrollPercentage = (scrollPosition / contentHeight) * 100;
+   const indicatorWidth = (scrollPercentage * headerHeight) / 100;
+
+    scrollIndicator.style.width = `${indicatorWidth}rem`;
+  }
+
+  window.addEventListener('scroll', updateScrollIndicator);
+  window.addEventListener('resize', updateScrollIndicator);
+
+  updateScrollIndicator();
+});
+
+// hero slider
+const initHeroSlider = () => {
+  const heroSlider = new Swiper('.home-slider', {
+    pagination: {
+      el: '.swiper-pagination',
+      dynamicBullets: true,
+    },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true,
+    },
+  });
+};
+
+// favorite menu slider
+const initFavoriteMenuSlider = () => {
+  const imageList = document.querySelector('.slider-wrapper .image-list');
+  const slideButtons = document.querySelectorAll('.slider-wrapper .fa-solid');
+  const sliderScrollbar = document.querySelector('.fav-menu-card .slider-scrollbar');
+  const scrollbarThumb = sliderScrollbar.querySelector('.scrollbar-thumb');
+
+  const handleMouseDown = (e) => {
+    const startX = e.clientX;
+    const thumbPosition = scrollbarThumb.offsetLeft;
+    const maxThumbPosition = sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth;
+    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+
+    const handleMouseMove = (e) => {
+      const deltaX = e.clientX - startX;
+      const newThumbPosition = thumbPosition + deltaX;
+      const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+      const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+      scrollbarThumb.style.left = `${boundedPosition}px`;
+      imageList.scrollLeft = scrollPosition;
+    };
+
+    const handleMouseUp = () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+  };
+
+  scrollbarThumb.addEventListener('mousedown', handleMouseDown);
+
+  slideButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const direction = button.id === 'prev-slide' ? -1 : 1;
+      const scrollAmount = imageList.clientWidth * direction;
+      imageList.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+  });
+
+  const handleSlideButtons = () => {
+    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+    slideButtons[0].style.display = imageList.scrollLeft <= 0 ? 'none' : 'flex';
+    slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? 'none' : 'flex';
+  };
+
+  const updateScrollThumbPosition = () => {
+    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+    const scrollPosition = imageList.scrollLeft;
+    const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+    scrollbarThumb.style.left = `${thumbPosition}px`;
+  };
+
+  imageList.addEventListener('scroll', () => {
+    updateScrollThumbPosition();
+    handleSlideButtons();
+  });
+};
+
+window.addEventListener('resize', initFavoriteMenuSlider);
+window.addEventListener('load', () => {
+  // Assuming initHeroSlider is defined elsewhere
+  initHeroSlider();
+  initFavoriteMenuSlider();
+});
+

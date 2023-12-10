@@ -1,0 +1,146 @@
+:root {
+    --primary: #422415;
+    --bg: #fff4f0;
+    --white: #fff;
+    --white-milk: #faf1e4;
+    --black: #000;
+    --black-light: #1b1c1e;
+    --dark-choco: #422415;
+    --light-cream:#fff4f0 ;
+    --cream-dark: #cda45e;
+    --cream-white: #e1c2a2;
+    --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+}
+
+/*Menu section*/
+.menu p,
+.products p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 500;
+  line-height: 1.3;
+  padding: 0.5rem;
+}
+
+.menu h2 {
+  margin-bottom: 1rem;
+  margin-top: 7rem;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  justify-content: center;
+  padding: 0;
+}
+
+.menu .row .menu-card {
+  text-align: center;
+  padding-bottom: 6rem;
+}
+
+.menu .row .menu-card img {
+  width: 50%;
+}
+
+.menu .row .menu-card .menu-card-title {
+  margin: 1.5rem auto 1rem;
+}
+
+.menu .row .menu-card .menu-card-description {
+  font-size: 1rem;
+}
+
+/* booking floating */
+.booking-floating  {
+    display: flex;
+    flex-direction: row;
+    float: right;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 99;
+    padding: 12px;
+    background: linear-gradient(to right, var(--cream-dark), var(--dark-choco));
+    background-size: 200% 100%;
+    border-radius: 10px;
+    border: 0.9rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+  
+.booking-floating:hover {
+    background-position: right;
+}
+  
+.booking-floating .booking {
+    font-size: 18px;
+    color: var(--prim);
+    margin-right: 8px;
+}
+
+/* Products Section */
+
+.products .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+
+.products .product-card {
+  text-align: center;
+  border: 1px solid #666;
+  padding: 2rem;
+}
+
+
+.products .product-image {
+  padding: 1rem 0;
+
+}
+
+.products .product-image img {
+  height: 15rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.products .product-image img:hover{
+    transform: scaleY(1.1);
+}
+
+.products .product-content h3 {
+  font-size: 1.3rem;
+}
+
+.products .product-stars {
+  font-size: 1rem;
+  padding: 0.4rem;
+  color: var(--primary);
+}
+
+.products .product-stars .star-full {
+  fill: var(--primary);
+}
+
+.products .product-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.products .product-price span {
+  text-decoration: line-through;
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
+
+/*desktop*/
+@media (max-width: 1366px){
+ .menu .row .menu-card img {
+    width: 200px;
+    height: 200px;
+ }
+}

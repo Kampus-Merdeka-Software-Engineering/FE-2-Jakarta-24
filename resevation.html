@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Eco Blend24</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="x-icon" href="assets/logo doang.png" />
+  <!--feather icon-->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reservation.css">
+</head>
+
+<body>
+
+
+  <!-- Navbar start -->
+  <nav class="navbar">
+    <a href="#" class="navbar-logo">
+      <img src="assets/logo_icon.png" alt="EcoBlend24" >
+    </a>
+    <div class="navbar-nav">
+      <a href="/index.html">Home</a>
+      <a href="/index.html#about">About Us</a>
+      <a href="/menu.html">Menu</a>
+      <a href="/index.html#contact">Contact</a>
+    </div>
+    <div class="navbar-extra">
+      <a href="#" id="search-button"><i data-feather="search"></i></a>
+      <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+
+    <!-- Search Form start -->
+    <div class="search-form">
+      <input type="search" id="search-box" placeholder="search here...">
+      <label for="search-box"><i data-feather="search"></i></label>
+    </div>
+    
+
+    <!-- Login Form start -->
+    <form action="" class="login-form">
+      <h3>Log-in</h3>
+      <input type="email" placeholder="E-mail" class="box">
+      <input type="password" placeholder="Password" class="box">
+      <p>Forgot your password? <a href="#">Click here</a></p>
+      <p>Don't have an account? <a href="#">Create now</a></p>
+      <input type="submit" value="Log-in" class="btn">
+    </form>
+    <!-- Login Form end -->
+    
+  </nav>
+  <section class = "banner">
+      <h2>BOOK YOUR TABLE NOW</h2>
+      <div class = "card-container">
+          <div class = "card-img">
+            <!-- image here -->
+        </div>
+
+        <div class = "card-content">
+             <h3>Reservation</h3>
+              <form>
+                 <div class = "form-row">
+                     <select name = "days">
+                         <option value = "day-select">Select Day</option>
+                         <option value = "sunday">Sunday</option>
+                         <option value = "monday">Monday</option>
+                         <option value = "tuesday">Tuesday</option>
+                         <option value = "wednesday">Wednesday</option>
+                         <option value = "thursday">Thursday</option>
+                         <option value = "friday">Friday</option>
+                         <option value = "saturday">Saturday</option>
+                      </select>
+
+                       <select name = "hours">
+                          <option value = "hour-select">Select Hour</option>
+                          <option value = "10">10: 00</option>
+                          <option value = "10">12: 00</option>
+                          <option value = "10">14: 00</option>
+                          <option value = "10">16: 00</option>
+                          <option value = "10">18: 00</option>
+                          <option value = "10">20: 00</option>
+                          <option value = "10">22: 00</option>
+                       </select>
+                   </div>
+
+                   <div class = "form-row">
+                     <input type = "text" placeholder="Full Name">
+                     <input type = "text" placeholder="Phone Number">
+                   </div>
+
+                  <div class = "form-row">
+                     <input type = "number" placeholder="How Many Persons?" min = "1">
+                     <input type = "submit" value = "BOOK TABLE">
+                  </div>
+              </form>
+          </div>
+      </div>
+   </section>
+
+  <!--Footer section start-->
+  <footer>
+    <div class="social">
+     <a href="#"><i data-feather="instagram"></i></a>
+     <a href="#"><i data-feather="mail"></i></a>
+     <a href="#wa.me/628324420703"><i data-feather="phone"></i></a>
+    </div>
+
+   <div class="links">
+     <a href="#home">Home</a>
+     <a href="#About">About Us</a>
+     <a href="#Menu">Menu</a>
+     <a href="#Contact">Contact</a>
+    </div>
+
+    <div class="credit">
+     <p>Created by <a href="">Team L - Group 24 Jakarta</a>. | &copy;2023</p>
+    </div>
+  </footer>
+  <!--Footer section end-->
+
+  <!--Feather icon-->
+  <script>
+    feather.replace();
+  </script>
+
+  <!--Java Script-->
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
