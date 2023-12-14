@@ -1,277 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eco Blend24</title>
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;400;500;600;800&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" type="x-icon" href="assets/logo doang.png" />
-  <!--feather icon-->
-  <script src="https://unpkg.com/feather-icons"></script>
-  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
- 
-  <!-- swiper js link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eco Blend24</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="x-icon" href="assets/logo doang.png" />
+    <!--feather icon-->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
-  <link rel="stylesheet" href="css/style.css">
-</head>
+    <!-- swiper js link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">
+        <img src="assets/logo_icon.png" alt="EcoBlend24" />
+      </a>
+      <div class="navbar-nav">
+        <a href="index.html">Home</a>
+        <a href="#About">About Us</a>
+        <a href="menu.html">Menu</a>
+        <a href="#Contact">Contact</a>
+      </div>
+      <div class="navbar-extra">
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
 
-  <!-- Navbar start -->
-  <nav class="navbar">
-    <a href="#" class="navbar-logo">
-      <img src="assets/logo_icon.png" alt="EcoBlend24" >
-    </a>
-    <div class="navbar-nav">
-      <a href="index.html">Home</a>
-      <a href="#About">About Us</a>
-      <a href="menu.html">Menu</a>
-      <a href="#Contact">Contact</a>
-    </div>
-    <div class="navbar-extra">
-      <a href="#" id="search-button"><i data-feather="search"></i></a>
-      <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
-    </div>
+      <!-- Search Form start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
 
-    <!-- Search Form start -->
-    <div class="search-form">
-      <input type="search" id="search-box" placeholder="search here...">
-      <label for="search-box"><i data-feather="search"></i></label>
-    </div>
-    
+      <!-- Login Form start -->
+      <form action="" class="login-form">
+        <h3>Log-in</h3>
+        <input type="email" placeholder="E-mail" class="box" />
+        <input type="password" placeholder="Password" class="box" />
+        <p>Forgot your password? <a href="#">Click here</a></p>
+        <p>Don't have an account? <a href="#">Create now</a></p>
+        <input type="submit" value="Log-in" class="btn" />
+      </form>
+      <!-- Login Form end -->
+      <!-- scroll indicator -->
+      <div class="scroll-indicator" id="scrollIndicator"></div>
+    </nav>
 
-    <!-- Login Form start -->
-    <form action="" class="login-form">
-      <h3>Log-in</h3>
-      <input type="email" placeholder="E-mail" class="box">
-      <input type="password" placeholder="Password" class="box">
-      <p>Forgot your password? <a href="#">Click here</a></p>
-      <p>Don't have an account? <a href="#">Create now</a></p>
-      <input type="submit" value="Log-in" class="btn">
-    </form>
-    <!-- Login Form end -->
-    <!-- scroll indicator -->
-    <div class="scroll-indicator" id="scrollIndicator"></div>
-    
-  </nav>
+    <!--hero section start-->
+    <section class="hero" id="Home">
+      <main class="content">
+        <h1>Eco Blend24</h1>
+        <h1>Coffee</h1>
+        <p>
+          Awaken Your Senses with Eco Blend24: Where Nature Meets Brew
+          Perfection
+        </p>
+        <a href="menu.html" class="cta">See Our Menu</a>
+      </main>
+    </section>
+    <!--hero section end-->
 
-  <!--hero section start-->
-  <section class="hero" id="Home">
-    <main class="content">
-      <h1>Eco Blend24</h1>
-      <h1>Coffee</h1>
-      <p>Awaken Your Senses with Eco Blend24: Where Nature Meets Brew Perfection</p>
-      <a href="menu.html" class="cta">See Our Menu</a>
-    </main>
-  </section>
- <!--hero section end-->
+    <!--about section start-->
+    <section class="about" id="About">
+      <h2>About Us</h2>
 
- <!--about section start-->
- <section class="about" id="About">
-   <h2>About Us</h2>
-
-    <div class="row">
-     <div class="about-img">
-       <img src="assets/kopi sungai.png" alt="About Us">
-     </div>
-     <div class="content">
-       <h3>Welcome to Eco Blend24 Coffee!</h3>
-       <p>We believe in a sustainable and environmentally friendly experience that transcends your morning ritual. Our commitment to the planet goes beyond beans—it's a blend of passion, responsibility, and a dedication to a greener future.</p>
-     </div>
-    </div>
-
-   <div class="row">
-     <div class="about-img2">
-       <img src="assets/barista.png" alt="About Us">
-     </div>
-     <div class="content2">
-       <h3>At Eco Blend24, we believe in more than just brewing a cup of coffee</h3>
-       <p>It is a unique fusion of flavor, aroma, and sustainability values. We draw inspiration from the beauty of nature to craft each coffee bean with full flavor and a commitment to environmental consciousness.</p>
-     </div>
-   </div>
- </section>
-
-
-  
-  <section id="why-us" class="why-us">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>Why Our Coffee</h2>
+      <div class="row">
+        <div class="about-img">
+          <img src="assets/kopi sungai.png" alt="About Us" />
+        </div>
+        <div class="content">
+          <h3>Welcome to Eco Blend24 Coffee!</h3>
+          <p>
+            We believe in a sustainable and environmentally friendly experience
+            that transcends your morning ritual. Our commitment to the planet
+            goes beyond beans—it's a blend of passion, responsibility, and a
+            dedication to a greener future.
+          </p>
+        </div>
       </div>
 
       <div class="row">
+        <div class="about-img2">
+          <img src="assets/barista.png" alt="About Us" />
+        </div>
+        <div class="content2">
+          <h3>
+            At Eco Blend24, we believe in more than just brewing a cup of coffee
+          </h3>
+          <p>
+            It is a unique fusion of flavor, aroma, and sustainability values.
+            We draw inspiration from the beauty of nature to craft each coffee
+            bean with full flavor and a commitment to environmental
+            consciousness.
+          </p>
+        </div>
+      </div>
+    </section>
 
-        <div class="col-lg-4">
-          <div class="box" data-aos="zoom-in" data-aos-delay="100">
-            <span>01</span>
-            <h4>Premium Quality, Responsible Sourcing</h4>
-            <p>❖ Immerse yourself in the rich, robust flavor of our premium coffee beans sourced from sustainable & ethically managed farms</p>
-            <p>❖ We prioritize fair trade practices, ensuring that every bean is cultivated with care, respecting both the environment and the hardworking farmers</p>
+    <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Why Our Coffee</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+              <span>01</span>
+              <h4>Premium Quality, Responsible Sourcing</h4>
+              <p>
+                ❖ Immerse yourself in the rich, robust flavor of our premium
+                coffee beans sourced from sustainable & ethically managed farms
+              </p>
+              <p>
+                ❖ We prioritize fair trade practices, ensuring that every bean
+                is cultivated with care, respecting both the environment and the
+                hardworking farmers
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+              <span>02</span>
+              <h4>Earth-Friendly Packaging</h4>
+              <p>
+                ❖ Our commitment to sustainability extends to our packaging. Eco
+                Blend24 comes in eco-friendly, biodegradable packaging that
+                minimizes its environmental footprint
+              </p>
+              <p>
+                ❖ Say goodbye to excess waste and hello to guilt-free enjoyment
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+              <span>03</span>
+              <h4>Carbon-Neutral Roasting Process</h4>
+              <p>
+                ❖ Our coffee beans undergo a meticulous roasting process that
+                not only enhances flavor but also reduces carbon emissions
+              </p>
+              <p>
+                ❖ Enjoy your coffee knowing that every cup has a positive impact
+                on the environment
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+              <span>04</span>
+              <h4>Planting Trees for a Greener Tomorrow</h4>
+              <p>
+                ❖ For every purchase of Eco Blend24, we contribute to
+                reforestation projects around the world
+              </p>
+              <p>❖ Join us in creating a greener tomorrow—one cup at a time</p>
+            </div>
           </div>
         </div>
-
-        <div class="col-lg-4 mt-4 mt-lg-0">
-          <div class="box" data-aos="zoom-in" data-aos-delay="100">
-            <span>02</span>
-            <h4>Earth-Friendly Packaging</h4>
-            <p>❖ Our commitment to sustainability extends to our packaging. Eco Blend24 comes in eco-friendly, biodegradable packaging that minimizes its environmental footprint</p>
-            <p>❖ Say goodbye to excess waste and hello to guilt-free enjoyment</p>
+      </div>
+    </section>
+    <section class="story1" id="story1">
+      <div class="our-story">
+        <h2>Our Story</h2>
+        <img src="assets/story2.png" alt="story2" />
+        <div class="line"></div>
+        <div class="content-story">
+          <div class="text">
+            <p>
+              Established in 2023, Eco Blend24 is a sanctuary born from our deep
+              love for nature and coffee. Nestled amidst breathtaking
+              landscapes, our cafe promises an escape from the daily grind.
+              Embrace tranquility as you sip our thoughtfully curated blends,
+              each cup a harmonious union of rich flavors and sustainability. At
+              Eco Blend24, we invite you to unwind in the embrace of nature,
+              where the soothing ambiance and panoramic views create a haven for
+              relaxation. Join us on a journey where every sip is a moment of
+              respite, a blend of serenity and the finest eco-friendly coffee.
+            </p>
+            <a href="about.html" class="btn">Read More</a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="col-lg-4 mt-4 mt-lg-0">
-          <div class="box" data-aos="zoom-in" data-aos-delay="100">
-            <span>03</span>
-            <h4> Carbon-Neutral Roasting Process</h4>
-            <p>❖ Our coffee beans undergo a meticulous roasting process that not only enhances flavor but also reduces carbon emissions</p>
-            <p>❖ Enjoy your coffee knowing that every cup has a positive impact on the environment</p>
+    <!--about section end-->
+
+    <!-- favorit menu section -->
+    <section class="menu" id="menu">
+      <div class="menu-card">
+        <h4>Favorite Menu</h4>
+      </div>
+      <div class="fav-menu-card">
+        <div class="slider-wrapper">
+          <button
+            id="prev-slide"
+            class="fa-solid fa-circle-arrow-left"
+          ></button>
+          <ul class="image-list" id="menu-favorit"></ul>
+          <button
+            id="next-slide"
+            class="fa-solid fa-circle-arrow-right"
+          ></button>
+        </div>
+        <div class="slider-scrollbar">
+          <div class="scrollbar-track">
+            <div class="scrollbar-thumb"></div>
           </div>
         </div>
+      </div>
+    </section>
+    <!--favorite menu end-->
 
-        <div class="col-lg-4 mt-4 mt-lg-0">
-          <div class="box" data-aos="zoom-in" data-aos-delay="100">
-            <span>04</span>
-            <h4> Planting Trees for a Greener Tomorrow</h4>
-            <p>❖ For every purchase of Eco Blend24, we contribute to reforestation projects around the world</p>
-            <p>❖ Join us in creating a greener tomorrow—one cup at a time</p>
+    <!--promo start-->
+    <section class="promo" id="promo">
+      <div class="promo-container">
+        <div class="promo-txt">
+          <h2>Special Promo</h2>
+        </div>
+        <div class="promo-img">
+          <img src="assets/promo1.png" alt="promo" />
+          <img src="assets/promo2.png" alt="promo" />
+          <img src="assets/promo3.png" alt="promo" />
+        </div>
+      </div>
+    </section>
+    <!--promo end-->
+
+    <!--book a table-->
+    <section>
+      <div class="booking-floating">
+        <a href="/resevation.html" class="booking">Book a table</a>
+      </div>
+    </section>
+
+    <!--Contact section start-->
+    <section id="Contact" class="contact">
+      <h2>Contact Us</h2>
+
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253840.49136821766!2d106.66436014486176!3d-6.229720821772852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x5371bf0fdad786a2!2sJakarta%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1701248085295!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+        <form action="">
+          <div class="input-group">
+            <i data feather="user"></i>
+            <input type="text" placeholder="Name" />
           </div>
-        </div>
-
+          <div class="input-group">
+            <i data feather="mail"></i>
+            <input type="text" placeholder="E-mail" />
+          </div>
+          <div class="input-group">
+            <i data feather="message-circle"></i>
+            <input type="text" placeholder="Message" />
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
       </div>
-    </div>
-  </section>
-  <section class="story1" id="story1">
-    <div class="our-story">
-      <h2>Our Story</h2>
-      <img src="assets/story2.png" alt="story2">
-      <div class="line"></div>
-      <div class="content-story">
-        <div class="text">
-          <p>Established in 2023, Eco Blend24 is a sanctuary born from our deep love for nature and coffee. Nestled amidst breathtaking landscapes, our cafe promises an escape from the daily grind. Embrace tranquility as you sip our thoughtfully curated blends, each cup a harmonious union of rich flavors and sustainability. At Eco Blend24, we invite you to unwind in the embrace of nature, where the soothing ambiance and panoramic views create a haven for relaxation. Join us on a journey where every sip is a moment of respite, a blend of serenity and the finest eco-friendly coffee.</p>
-          <a href="about.html" class="btn">Read More</a>
-        </div>
+    </section>
+    <!--Contact section end-->
+
+    <!--Footer section start-->
+    <footer>
+      <div class="social">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="mail"></i></a>
+        <a href="#wa.me/628324420703"><i data-feather="phone"></i></a>
       </div>
-        
-    </div>
-  </section>
-  
- <!--about section end-->
 
- <!-- favorit menu section -->
- <section class="menu" id="menu">
-   <div class="menu-card">
-      <h4>Favorite Menu</h4>
-    </div>
-    <div class="fav-menu-card">
-      <div class="slider-wrapper">
-        <button id="prev-slide" class="fa-solid fa-circle-arrow-left"></button>
-        <ul class="image-list">
-          <img class="image-item" src="assets/fav1.png" alt="fav-menu" />
-          <img class="image-item" src="assets/fav2.png" alt="fav-menu" />
-          <img class="image-item" src="assets/fav3.png" alt="fav-menu" />
-          <img class="image-item" src="assets/fav4.png" alt="fav-menu" />
-          <img class="image-item" src="assets/fav5.png" alt="fav-menu" />
-          <img class="image-item" src="assets/fav6.png" alt="fav-menu" />
-        </ul>
-        <button id="next-slide" class="fa-solid fa-circle-arrow-right"></button>
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#About">About Us</a>
+        <a href="#Menu">Menu</a>
+        <a href="#Contact">Contact</a>
       </div>
-      <div class="slider-scrollbar">
-        <div class="scrollbar-track">
-          <div class="scrollbar-thumb"></div>
-        </div>
+
+      <div class="credit">
+        <p>Created by <a href="">Team L - Group 24 Jakarta</a>. | &copy;2023</p>
       </div>
-    </div>
-  </section>
-  <!--favorite menu end-->
+    </footer>
+    <!--Footer section end-->
 
-  <!--promo start-->
-  <section class="promo" id="promo">
-    <div class="promo-container">
-      <div class="promo-txt">
-        <h2>Special Promo</h2>
-      </div>
-      <div class="promo-img">
-        <img src="assets/promo1.png" alt="promo">
-        <img src="assets/promo2.png" alt="promo">
-        <img src="assets/promo3.png" alt="promo">
-      </div>
-    </div>
-  </section>
-  <!--promo end-->
+    <!-- swiper js link -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    ></script>
 
-  <!--book a table-->
-  <section>
-    <div class="booking-floating">
-      <a href="/resevation.html" class="booking">Book a table</a>
-   </div>
-  </section>
+    <!--Feather icon-->
+    <script>
+      feather.replace();
+    </script>
 
-
-
- <!--Contact section start-->
- <section id="Contact" class="contact">
-   <h2>Contact Us</h2>
-
-   <div class="row">
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253840.49136821766!2d106.66436014486176!3d-6.229720821772852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e945e34b9d%3A0x5371bf0fdad786a2!2sJakarta%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1701248085295!5m2!1sid!2sid" 
-       allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
-     <form action="">
-       <div class="input-group">
-          <i data feather="user"></i>
-          <input type="text" placeholder="Name">
-        </div>
-        <div class="input-group">
-          <i data feather="mail"></i>
-          <input type="text" placeholder="E-mail">
-        </div>
-        <div class="input-group">
-          <i data feather="message-circle"></i>
-          <input type="text" placeholder="Message">
-        </div>
-       <button type="submit" class="btn">Send Message</button>
-     </form>
-   </div>
- </section>
- <!--Contact section end-->
-
-  <!--Footer section start-->
-  <footer>
-    <div class="social">
-     <a href="#"><i data-feather="instagram"></i></a>
-     <a href="#"><i data-feather="mail"></i></a>
-     <a href="#wa.me/628324420703"><i data-feather="phone"></i></a>
-    </div>
-
-   <div class="links">
-     <a href="#home">Home</a>
-     <a href="#About">About Us</a>
-     <a href="#Menu">Menu</a>
-     <a href="#Contact">Contact</a>
-    </div>
-
-    <div class="credit">
-     <p>Created by <a href="">Team L - Group 24 Jakarta</a>. | &copy;2023</p>
-    </div>
-  </footer>
-  <!--Footer section end-->
-
-  <!-- swiper js link -->
-  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!--Feather icon-->
-  <script>
-    feather.replace();
-  </script>
-
-  <!--Java Script-->
-  <script src="js/script.js"></script>
-
-</body>
-
+    <!--Java Script-->
+    <script src="js/script.js"></script>
+    <script>
+      const menuFavorit = document.querySelector("#menu-favorit");
+      fetch("http://localhost:3000/menu/minuman", {
+        method: "GET",
+      })
+        .then((res) => res.json())
+        .then((res) => {
+          let drinks = res.data;
+          let listMenu = "";
+          drinks.forEach((drink) => {
+            listMenu += ` <img class="image-item" src="${drink.image}" alt="fav-menu" />`;
+          });
+          menuFavorit.innerHTML = listMenu;
+        });
+    </script>
+  </body>
 </html>
