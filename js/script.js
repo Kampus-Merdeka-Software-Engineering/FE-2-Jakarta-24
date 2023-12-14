@@ -15,6 +15,21 @@ document.querySelector('#search-button').onclick = (e) => {
   e.preventDefault();
 };
 
+document.addEventListener('DOMContentLoaded', function () {
+  const searchBox = document.getElementById('search-box');
+
+  searchBox.addEventListener('input', function () {
+    const searchText = searchBox.value.toLowerCase();
+    const allTextElements = document.querySelectorAll('.searchable-text');
+
+    allTextElements.forEach(function (element) {
+      const textContent = element.textContent.toLowerCase();
+      element.style.display = textContent.includes(searchText) ? 'block' : 'none';
+    });
+  });
+});
+
+
 
 
 // Klik di luar elemen
@@ -162,4 +177,3 @@ window.addEventListener('load', () => {
   initHeroSlider();
   initFavoriteMenuSlider();
 });
-
